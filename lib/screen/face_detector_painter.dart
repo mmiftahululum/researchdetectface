@@ -56,8 +56,7 @@ class FaceDetectorPainter extends CustomPainter {
           translateX(face.boundingBox.left, rotation, size, absoluteImageSize),
           translateY(face.boundingBox.top, rotation, size, absoluteImageSize),
           translateX(face.boundingBox.right, rotation, size, absoluteImageSize),
-          translateY(
-              face.boundingBox.bottom, rotation, size, absoluteImageSize),
+          translateY(face.boundingBox.bottom, rotation, size, absoluteImageSize),
         ),
         paint,
       );
@@ -78,27 +77,26 @@ class FaceDetectorPainter extends CustomPainter {
       }
 
       paintContour(FaceContourType.face);
-      paintContour(FaceContourType.leftEyebrowTop);
-      paintContour(FaceContourType.leftEyebrowBottom);
-      paintContour(FaceContourType.rightEyebrowTop);
-      paintContour(FaceContourType.rightEyebrowBottom);
-      paintContour(FaceContourType.leftEye);
-      paintContour(FaceContourType.rightEye);
-      paintContour(FaceContourType.upperLipTop);
-      paintContour(FaceContourType.upperLipBottom);
-      paintContour(FaceContourType.lowerLipTop);
-      paintContour(FaceContourType.lowerLipBottom);
-      paintContour(FaceContourType.noseBridge);
-      paintContour(FaceContourType.noseBottom);
-      paintContour(FaceContourType.leftCheek);
-      paintContour(FaceContourType.rightCheek);
+      // paintContour(FaceContourType.leftEyebrowTop);
+      // paintContour(FaceContourType.leftEyebrowBottom);
+      // paintContour(FaceContourType.rightEyebrowTop);
+      // paintContour(FaceContourType.rightEyebrowBottom);
+      // paintContour(FaceContourType.leftEye);
+      // paintContour(FaceContourType.rightEye);
+      // paintContour(FaceContourType.upperLipTop);
+      // paintContour(FaceContourType.upperLipBottom);
+      // paintContour(FaceContourType.lowerLipTop);
+      // paintContour(FaceContourType.lowerLipBottom);
+      // paintContour(FaceContourType.noseBridge);
+      // paintContour(FaceContourType.noseBottom);
+      // paintContour(FaceContourType.leftCheek);
+      // paintContour(FaceContourType.rightCheek);
 
     }
   }
 
   @override
   bool shouldRepaint(FaceDetectorPainter oldDelegate) {
-    return oldDelegate.absoluteImageSize != absoluteImageSize ||
-        oldDelegate.faces != faces;
+    return oldDelegate.absoluteImageSize != absoluteImageSize || oldDelegate.faces != faces;
   }
 }
